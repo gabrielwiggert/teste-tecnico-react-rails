@@ -65,7 +65,7 @@ const Form = styled.div`
         background-color: white;
         border-radius: 5px;
         border: 1px solid #D5D5D5;
-        width: 30vw;
+        width: 50vw;
         height: 52px;
         margin-bottom: 24px;
         font-family: 'Lexend Deca', sans-serif;

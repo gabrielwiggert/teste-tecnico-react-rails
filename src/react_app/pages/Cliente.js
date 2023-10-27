@@ -9,32 +9,16 @@ import { render } from 'react-dom'
 import { ThreeDots } from 'react-loader-spinner'
 import UserContext from "../UserContext";
 
-export default function Home () {
+export default function Cliente () {
     const { clientes, setClientes } = useContext(UserContext);
-
-    useEffect(() => {
-        const requisicao = axios.get("http://localhost:4000/clientes.json");
-
-        requisicao.then((response) => {
-            setClientes(response.data);
-        });
-    
-        requisicao.catch((err) => {
-            console.log(err);
-            alert(err);
-        });
-      }, []);
 
     return (
         <Container>
-            <h1>Clientes</h1>
+            <h1>{clientes[0].nome}</h1>
 
-            <ul class="clientes">
-                {clientes.map(e =>
-                    <Link to="/cliente">
-                        <li>{e.nome}</li>
-                    </Link>
-                )}
+            <ul class="cliente">
+                <li>{clientes[0].email}</li>
+                <li>{clientes[0].celular}</li>
             </ul>
         </Container>
     );

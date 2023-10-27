@@ -8,14 +8,13 @@ export default function Header() {
     return (
         <Container>
             <img src={logo} />
-            <h1>Home</h1>
         </Container>
     );
 }
 
 const Container = styled.div`
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 20px;
     align-items: center;
     height: 80px;

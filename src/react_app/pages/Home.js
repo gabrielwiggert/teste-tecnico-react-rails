@@ -12,7 +12,9 @@ import UserContext from "../UserContext";
 export default function Home () {
     return (
         <Container>
-            <h1>Home</h1>
+            <Link to="/">
+                <h1>Home</h1>
+            </Link>
         </Container>
     );
 }

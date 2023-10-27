@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :balances
+  resources :patrimonio_clientes
+  resources :patrimonios
 
   match '/clientes', controller: 'cors', action: 'cors_preflight_check', via: [:options]
   match '/usuarios', controller: 'cors', action: 'cors_preflight_check', via: [:options]

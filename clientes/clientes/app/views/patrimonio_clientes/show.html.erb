@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @patrimonio_cliente %>
+
+<div>
+  <%= link_to "Edit this patrimonio cliente", edit_patrimonio_cliente_path(@patrimonio_cliente) %> |
+  <%= link_to "Back to patrimonio clientes", patrimonio_clientes_path %>
+
+  <%= button_to "Destroy this patrimonio cliente", @patrimonio_cliente, method: :delete %>
+</div>

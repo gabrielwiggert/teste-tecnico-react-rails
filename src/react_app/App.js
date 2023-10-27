@@ -7,20 +7,23 @@ import Header from './components/Header.js';
 import Login from "./pages/Login.js";
 import Home from "./pages/Home.js";
 import Cliente from "./pages/Cliente.js";
+import Patrimonio from "./pages/Patrimonio.js";
 import UserContext from "./UserContext";
 
 function App() {
   const [userData, setUserData] = useState(null);
   const [clientes, setClientes] = useState([]);
+  const [index, setIndex] = useState(0);
   
   return (
-    <UserContext.Provider value={{userData, setUserData, clientes, setClientes}}>
+    <UserContext.Provider value={{userData, setUserData, clientes, setClientes, index, setIndex}}>
       <Header />
         <BrowserRouter>
           <Routes>
               <Route path="/" element={<Login />} />
               <Route path="/home" element={<Home />} />
               <Route path="/cliente/:id" element={<Cliente />} />
+              <Route path="/cliente/:id/patrimonio" element={<Patrimonio />} />
           </Routes>
         </BrowserRouter>
     </UserContext.Provider>

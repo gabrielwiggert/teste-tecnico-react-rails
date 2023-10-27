@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_10_27_191614) do
+ActiveRecord::Schema[7.1].define(version: 2023_10_27_220535) do
+  create_table "balances", force: :cascade do |t|
+    t.integer "idCliente"
+    t.float "contaCorrente"
+    t.float "rendaFixa"
+    t.float "rendaVariavel"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "clientes", force: :cascade do |t|
     t.string "nome"
     t.string "email"

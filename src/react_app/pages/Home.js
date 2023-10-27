@@ -48,10 +48,10 @@ const Container = styled.div`
     }
 
     ul {
-        margin-top: 2%;
+        margin-top: 5%;
     }
     
     li {
-        margin-bottom: 1%;
+        margin-bottom: 2%;
     }
 `;

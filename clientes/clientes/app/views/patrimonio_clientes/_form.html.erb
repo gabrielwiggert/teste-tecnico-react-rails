@@ -1,0 +1,37 @@
+<%= form_with(model: patrimonio_cliente) do |form| %>
+  <% if patrimonio_cliente.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(patrimonio_cliente.errors.count, "error") %> prohibited this patrimonio_cliente from being saved:</h2>
+
+      <ul>
+        <% patrimonio_cliente.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :id, style: "display: block" %>
+    <%= form.text_field :id %>
+  </div>
+
+  <div>
+    <%= form.label :contaCorrente, style: "display: block" %>
+    <%= form.text_field :contaCorrente %>
+  </div>
+
+  <div>
+    <%= form.label :rendaFixa, style: "display: block" %>
+    <%= form.text_field :rendaFixa %>
+  </div>
+
+  <div>
+    <%= form.label :rendaVariavel, style: "display: block" %>
+    <%= form.text_field :rendaVariavel %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

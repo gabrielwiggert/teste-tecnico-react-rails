@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Patrimonios</h1>
+
+<div id="patrimonios">
+  <% @patrimonios.each do |patrimonio| %>
+    <%= render patrimonio %>
+    <p>
+      <%= link_to "Show this patrimonio", patrimonio %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New patrimonio", new_patrimonio_path %>

@@ -11,8 +11,8 @@ import UserContext from "../UserContext";
 
 export default function Cliente () {
     const { clientes, setClientes } = useContext(UserContext);
+    const { index, setIndex } = useContext(UserContext);
     let idCliente = useParams();
-	const [index, setIndex] = useState(0);
 
     useEffect(() => {
         for (let i = 0; i < clientes.length; i++) {
@@ -25,12 +25,20 @@ export default function Cliente () {
 
     return (
         <Container>
+            <Link to="/home">
+                <button>Voltar</button>
+            </Link>
+
             <h1>{clientes[index].nome}</h1>
 
             <ul class="cliente">
                 <li>{clientes[index].email}</li>
                 <li>{clientes[index].celular}</li>
             </ul>
+
+            <Link to={`/cliente/${idCliente.id}/patrimonio`}>
+                <button>Patrimonio</button>
+            </Link>
         </Container>
     );
 }
@@ -48,5 +56,10 @@ const Container = styled.div`
     
     li {
         margin-bottom: 1%;
+    }
+
+    button {
+        margin-bottom: 15px;
+        margin-top: 15px;
     }
 `;

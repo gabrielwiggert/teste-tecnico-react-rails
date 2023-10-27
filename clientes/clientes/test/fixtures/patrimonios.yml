@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  contaCorrente: 1.5
+  rendaFixa: 1.5
+  rendaVariavel: 1.5
+
+two:
+  contaCorrente: 1.5
+  rendaFixa: 1.5
+  rendaVariavel: 1.5

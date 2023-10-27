@@ -11,14 +11,25 @@ import UserContext from "../UserContext";
 
 export default function Cliente () {
     const { clientes, setClientes } = useContext(UserContext);
+    let idCliente = useParams();
+	const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        for (let i = 0; i < clientes.length; i++) {
+            if (clientes[i].id == idCliente.id) {
+                setIndex(i);
+                break;
+            }
+        }
+      }, []);
 
     return (
         <Container>
-            <h1>{clientes[0].nome}</h1>
+            <h1>{clientes[index].nome}</h1>
 
             <ul class="cliente">
-                <li>{clientes[0].email}</li>
-                <li>{clientes[0].celular}</li>
+                <li>{clientes[index].email}</li>
+                <li>{clientes[index].celular}</li>
             </ul>
         </Container>
     );

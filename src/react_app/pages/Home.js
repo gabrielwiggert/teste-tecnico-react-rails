@@ -31,7 +31,7 @@ export default function Home () {
 
             <ul class="clientes">
                 {clientes.map(e =>
-                    <Link to="/cliente">
+                    <Link to={`/cliente/${e.id}`}>
                         <li>{e.nome}</li>
                     </Link>
                 )}

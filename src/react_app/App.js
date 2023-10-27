@@ -20,7 +20,7 @@ function App() {
           <Routes>
               <Route path="/" element={<Login />} />
               <Route path="/home" element={<Home />} />
-              <Route path="/cliente" element={<Cliente />} />
+              <Route path="/cliente/:id" element={<Cliente />} />
           </Routes>
         </BrowserRouter>
     </UserContext.Provider>

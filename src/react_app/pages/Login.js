@@ -22,15 +22,13 @@ export default function Login () {
 
         setLoading(true);
 
-            const requisicao = axios.post("https://reqres.in/api/users?page=2", {
-                username,
-                password
-            });
+        const requisicao = axios.get("http://localhost:4000/usuarios.json");
 
         requisicao.then((response) => {
-            setUserData(response.data)
-            console.log(response.data);
-            navigate(`/home`);
+            if (response.data[0].usuario === username && response.data[0].senha === password) {
+                setUserData(response.data)
+                navigate(`/home`);
+            }
         });
 
         requisicao.catch((err) => {

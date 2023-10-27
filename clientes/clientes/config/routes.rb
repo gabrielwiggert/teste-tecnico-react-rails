@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  match '/clientes', controller: 'cors', action: 'cors_preflight_check', via: [:options]
+  match '/usuarios', controller: 'cors', action: 'cors_preflight_check', via: [:options]
+  
+  resources :usuarios
   resources :clientes
   # get 'home/index'
   root 'home#index'

@@ -10,12 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_10_27_220535) do
+ActiveRecord::Schema[7.1].define(version: 2023_10_28_000357) do
+  create_table "agendamentos", force: :cascade do |t|
+    t.string "titulo"
+    t.datetime "datahora"
+    t.string "link"
+    t.string "sobre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_agendamentos_on_user_id"
+  end
+
   create_table "balances", force: :cascade do |t|
     t.integer "idCliente"
     t.float "contaCorrente"
     t.float "rendaFixa"
     t.float "rendaVariavel"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "chamados", force: :cascade do |t|
+    t.string "titulo"
+    t.string "codigo"
+    t.string "sobre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

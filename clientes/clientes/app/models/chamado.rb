@@ -1,0 +1,2 @@
+class Chamado < ApplicationRecord
+end

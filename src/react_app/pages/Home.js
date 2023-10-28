@@ -32,7 +32,7 @@ export default function Home () {
             <ul class="clientes">
                 {clientes.map(e =>
                     <Link to={`/cliente/${e.id}`}>
-                        <li>{e.nome}</li>
+                        <li class="nomes">{e.nome}</li>
                     </Link>
                 )}
             </ul>
@@ -42,6 +42,7 @@ export default function Home () {
 
 const Container = styled.div`
     margin-left: 10%;
+    margin-right: 10%;
     margin-top: 5%;
     h1 {
         font-size: 35px;

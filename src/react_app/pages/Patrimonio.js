@@ -8,6 +8,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { ThreeDots } from 'react-loader-spinner'
 import UserContext from "../UserContext";
+import { PieChart } from 'react-minimal-pie-chart';
 
 export default function Patrimonio () {
     const { clientes, setClientes } = useContext(UserContext);
@@ -41,6 +42,16 @@ export default function Patrimonio () {
                 <li>Renda Variável: {patrimonio.rendaVariavel}</li>
             </ul>
 
+            <PieContainer>
+            <PieChart
+                data={[
+                    { title: 'Conta Corrente', value: patrimonio.contaCorrente, color: '#6E99CE' },
+                    { title: 'Renda Fixa', value: patrimonio.rendaFixa, color: '#0099D4' },
+                    { title: 'Renda Variável', value: patrimonio.rendaVariavel, color: '#0B122D' },
+                ]}
+            />
+            </PieContainer>
+
             <Link to={`/cliente/${idCliente.id}`}>
                 <button>Voltar</button>
             </Link>
@@ -48,8 +59,15 @@ export default function Patrimonio () {
     );
 }
 
+const PieContainer = styled.div`
+    margin: 33px;
+    max-width:200px;
+    max-height:200px;
+`;
+
 const Container = styled.div`
     margin-left: 10%;
+    margin-right: 10%;
     margin-top: 5%;
     h1 {
         font-size: 35px;

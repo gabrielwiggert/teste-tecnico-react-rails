@@ -50,6 +50,7 @@ export default function Agendamentos () {
 
 const Container = styled.div`
     margin-left: 10%;
+    margin-right: 10%;
     margin-top: 5%;
     h1 {
         font-size: 35px;

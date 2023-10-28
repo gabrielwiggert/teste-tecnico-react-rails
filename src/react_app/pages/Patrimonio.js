@@ -36,10 +36,10 @@ export default function Patrimonio () {
             <h2>{clientes[index].nome}</h2>
 
             <ul class="patrimonio">
-                <li>Total: {patrimonio.contaCorrente + patrimonio.rendaFixa + patrimonio.rendaVariavel}</li>
-                <li>Conta Corrente: {patrimonio.contaCorrente}</li>
-                <li>Renda Fixa: {patrimonio.rendaFixa}</li>
-                <li>Renda Variável: {patrimonio.rendaVariavel}</li>
+                <li>Total: R$ {patrimonio.contaCorrente + patrimonio.rendaFixa + patrimonio.rendaVariavel}</li>
+                <li>Conta Corrente: R$ {patrimonio.contaCorrente}</li>
+                <li>Renda Fixa: R$ {patrimonio.rendaFixa}</li>
+                <li>Renda Variável: R$ {patrimonio.rendaVariavel}</li>
             </ul>
 
             <PieContainer>
@@ -60,6 +60,9 @@ export default function Patrimonio () {
 }
 
 const PieContainer = styled.div`
+    :hover {
+        opacity: .85;
+    }
     margin: 33px;
     max-width:200px;
     max-height:200px;
@@ -75,6 +78,7 @@ const Container = styled.div`
 
     h2 {
         font-size: 25px;
+        color: #3A3A3A;
     }
 
     ul {

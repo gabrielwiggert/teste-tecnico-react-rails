@@ -54,5 +54,37 @@ const Container = styled.div`
     
     li {
         margin-bottom: 2%;
+        color: #3A3A3A;
+    }
+
+    li:hover {
+        opacity: .45;
+    }
+
+    //styling
+    h1 {
+        --s: 0.05em;
+        --c: #9DBFE4;
+        
+        color: #0000;
+        padding-bottom: var(--s);
+        background: 
+            linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+            linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+        -webkit-background-clip: text,padding-box;
+                background-clip: text,padding-box;
+        transition: 0.5s;
+    }
+    h1:hover {--_p: 100%}
+
+    body {
+        height: 100vh;
+        margin: 0;
+        display: grid;
+        place-content: center;
+    }
+    h1 {
+        font-size: 3rem;
+        cursor: pointer;
     }
 `;

@@ -61,6 +61,7 @@ const Form = styled.div`
 
     input {
         border-width: 1px;
+        padding: 5px;
         border-color: #D4D4D4;
         background-color: white;
         border-radius: 5px;

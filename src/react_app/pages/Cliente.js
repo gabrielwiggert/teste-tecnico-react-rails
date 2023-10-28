@@ -37,7 +37,7 @@ export default function Cliente () {
             </ul>
 
             <Link to={`/cliente/${idCliente.id}/patrimonio`}>
-                <button>Patrimonio</button>
+                <button>Patrimônio</button>
             </Link>
             <br></br>
             <Link to={`/cliente/${idCliente.id}/agendamentos`}>
@@ -56,6 +56,7 @@ const Container = styled.div`
     margin-right: 10%;
     margin-top: 5%;
     h1 {
+        margin-top: 10px;
         font-size: 35px;
     }
 
@@ -65,6 +66,7 @@ const Container = styled.div`
     
     li {
         margin-bottom: 1%;
+        color: #3A3A3A;
     }
 
     button {

@@ -6,6 +6,7 @@
 <p>4. Rodar o front - npm start - acesso via navegador, link http://localhost:3000/</p>
 <p>5. Entrar na pasta do back - cd clientes; cd clientes (novamente)</p>
 <p>6. Rodar o back - rails s -p 4000 - acesso via navegador, link http://localhost:4000/</p>
+<p>7. Popular banco de dados - rails db:seed</p>
 
 # teste-gabriel-wiggert
 <h4>Introdução</h4>
